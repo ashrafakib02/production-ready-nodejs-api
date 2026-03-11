@@ -1,5 +1,4 @@
 import prisma from "../config/prisma.js";
-import { databaseUrl } from "../config/env.js";
 
 export const checkDatabase = async (req, res) => {
   try {
