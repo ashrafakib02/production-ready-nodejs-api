@@ -1,8 +1,8 @@
 import app from "./app.js";
-import { port } from "./config/env.js";
+import { port, nodeEnv, databaseUrl, jwtSecret } from "./config/env.js";
 
-const PORT = Number(port) || 5000;
+export  default {port, nodeEnv, databaseUrl, jwtSecret }
 
-app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`)
+app.listen(port, () => {
+  console.log(`Server running on port ${port}`)
 });
