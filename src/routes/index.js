@@ -9,7 +9,7 @@ const router = express.Router();
 
 router.get("/health", getHealthStatus);
 router.use("/auth", authRouter);
-router.use("/task", taskRouter)
+router.use("/tasks", taskRouter)
 router.use("/db", dbRouter)
 router.use("/users", userRoutes);
 export default router;

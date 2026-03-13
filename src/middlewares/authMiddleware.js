@@ -18,6 +18,7 @@ export const authenticate = (req, res, next) => {
     req.user = decoded;
 
     next();
+  // eslint-disable-next-line no-unused-vars
   } catch (error) {
     return res.status(401).json({
       status: "error",
