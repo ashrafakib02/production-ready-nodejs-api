@@ -1,7 +1,7 @@
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
 import { createUser, findUserByEmail } from "./userService.js";
-import { jwtSecret } from "../config/env.js";
+import { env } from "../config/env.js";
 
 export const registerUser = async ({ name, email, password }) => {
   const existingUser = await findUserByEmail(email);
@@ -39,7 +39,7 @@ export const loginUser = async ({ email, password }) => {
       userId: user.id,
       email: user.email,
     },
-    jwtSecret,
+    env.JWT_SECRET,
     { expiresIn: "1d" }
   );
 

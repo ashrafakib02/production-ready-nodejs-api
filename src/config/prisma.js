@@ -1,9 +1,9 @@
 import { PrismaClient } from "../generated/prisma/client.js";
 import { PrismaPg } from "@prisma/adapter-pg";
-import { databaseUrl } from "./env.js";
+import { env } from "./env.js"; 
 
 const adapter = new PrismaPg({
-  connectionString: databaseUrl
+  connectionString: env.DATABASE_URL
 });
 
 const prisma = new PrismaClient({ adapter });

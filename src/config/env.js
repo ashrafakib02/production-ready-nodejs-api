@@ -1,7 +1,12 @@
 import dotenv from "dotenv";
+import { cleanEnv, str, port } from "envalid";
 
 dotenv.config();
-export const port = process.env.PORT || 5000;
-export const nodeEnv = process.env.NODE_ENV || "development";
-export const databaseUrl = process.env.DATABASE_URL;
-export const jwtSecret = process.env.JWT_SECRET || "change_this_secret";
+
+
+export const env = cleanEnv(process.env, {
+  NODE_ENV: str({ default: "development" }),
+  PORT: port({ default: 5000 }),
+  DATABASE_URL: str(),
+  JWT_SECRET: str()
+});

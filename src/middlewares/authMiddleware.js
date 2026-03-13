@@ -1,5 +1,5 @@
 import jwt from "jsonwebtoken";
-import { jwtSecret } from "../config/env.js";
+import { env } from "../config/env.js";
 
 export const authenticate = (req, res, next) => {
   try {
@@ -12,7 +12,7 @@ export const authenticate = (req, res, next) => {
     }
 
     const token = authHeader.split(" ")[1];
-    const decoded = jwt.verify(token, jwtSecret);
+    const decoded = jwt.verify(token, env.JWT_SECRET);
 
     req.user = decoded;
 
