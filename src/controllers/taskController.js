@@ -1,11 +1,12 @@
 import { createTaskSchema } from "../validators/taskValidator.js";
 import {
   createTask,
-  getTasksByUserId,
   getTaskByIdAndUserId
 } from "../services/taskService.js";
 import { updateTaskSchema } from "../validators/taskValidator.js";
 import { updateTaskById, deleteTaskById } from "../services/taskService.js";
+import { getTasksByUserIdWithQuery } from "../services/taskService.js";
+import { taskQuerySchema } from '../validators/taskQueryValidator.js';
 
 export const createTaskHandler = async (req, res) => {
   try {
@@ -30,14 +31,16 @@ export const createTaskHandler = async (req, res) => {
 
 export const getTasksHandler = async (req, res) => {
   try {
-    const tasks = await getTasksByUserId(req.user.userId);
+    const query = taskQuerySchema.parse(req.query);
+
+    const result = await getTasksByUserIdWithQuery(req.user.userId, query);
 
     res.status(200).json({
       message: "Tasks fetched successfully",
-      tasks
+      ...result
     });
   } catch (error) {
-    res.status(500).json({
+    res.status(400).json({
       status: "error",
       message: error.message
     });
