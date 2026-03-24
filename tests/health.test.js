@@ -6,6 +6,7 @@ describe("Health endpoint", () => {
     const res = await request(app).get("/api/v1/health");
 
     expect(res.statusCode).toBe(200);
+    expect(res.body.status).toBe("ok");
     expect(res.body.message).toBe("Server is healthy from get health");
   });
 });
