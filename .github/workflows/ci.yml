@@ -36,6 +36,7 @@ jobs:
       - run: npm ci
 
       - run: npx prisma generate
+      - run: find src -maxdepth 3 -type f | sort
       - run: npx prisma migrate deploy
 
       - run: npm test
