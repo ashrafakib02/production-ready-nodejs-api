@@ -6,7 +6,7 @@
 
 ## 🟢 Live Status
 
-![CI](https://github.com/yourusername/yourrepo/actions/workflows/ci.yml/badge.svg)
+![](https://github.com/yourusername/yourrepo/actions/workflows/ci.yml/badge.svg)
 ![Node](https://img.shields.io/badge/node-%3E%3D18-green)
 ![License](https://img.shields.io/badge/license-MIT-blue)
 
