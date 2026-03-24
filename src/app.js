@@ -4,6 +4,8 @@ import { errorMiddleware } from "./middlewares/errorMiddleware.js";
 import morgan from "morgan";
 import helmet from "helmet";
 import rateLimit from "express-rate-limit";
+import swaggerUi from "swagger-ui-express";
+import { swaggerSpec } from "./config/swagger.js";
 
 const app = express();
 const limiter = rateLimit({
@@ -24,6 +26,7 @@ app.get("/", (req, res) => {
   res.json({ message: "API is running fine" }); 
 });
 app.use("/api/v1", router);
+app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 
 app.use(errorMiddleware);
 
