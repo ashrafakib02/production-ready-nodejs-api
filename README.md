@@ -135,6 +135,16 @@ DELETE /api/v1/tasks/:id
 
 
 ---
+
+## Key Learnings
+
+- Designing layered backend architecture
+- Building secure JWT authentication
+- Managing relational data with Prisma and PostgreSQL
+- Implementing API query features like pagination, filtering, and search
+- Setting up Swagger docs and CI for a backend project
+
+
 ## Status
 
 Completed core backend features including authentication, task CRUD, pagination, filtering, search, Swagger docs, and CI pipeline.
