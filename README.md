@@ -178,7 +178,6 @@ Deployment includes:
 - production-ready server setup  
 - Prisma migrations during build  
 
-
 ## ⚙️ Getting Started
 
 ### Deployment Notes
