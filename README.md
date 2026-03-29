@@ -150,9 +150,12 @@ DELETE /api/v1/tasks/:id
 Completed core backend features including authentication, task CRUD, pagination, filtering, search, Swagger docs, and CI pipeline.
 
 
-## Demo
+## 🚀 Live Demo
 
-This project is designed to be deployed as a live backend API with Swagger documentation for interactive testing.
+🔗 API Base URL: https://production-ready-nodejs-api.onrender.com
+📘 Swagger Docs:https://production-ready-nodejs-api.onrender.com/api-docs
+
+You can explore and test all endpoints directly using Swagger UI.
 
 
 ## ⚙️ Getting Started
