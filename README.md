@@ -152,10 +152,31 @@ Completed core backend features including authentication, task CRUD, pagination,
 
 ## 🚀 Live Demo
 
-🔗 API Base URL: https://production-ready-nodejs-api.onrender.com
-📘 Swagger Docs:https://production-ready-nodejs-api.onrender.com/api-docs
+The API is deployed and publicly accessible.
 
-You can explore and test all endpoints directly using Swagger UI.
+- 🌐 **Base URL:** https://your-app-name.onrender.com  
+- 📘 **Swagger UI:** https://your-app-name.onrender.com/api-docs  
+
+You can use Swagger to:
+- register/login users  
+- test authentication  
+- create and manage tasks  
+- explore all endpoints interactively  
+
+No setup required — everything is live.
+
+## Deployment
+
+This project is deployed on **Render** with a PostgreSQL database.
+
+- Backend: Render Web Service  
+- Database: PostgreSQL (Render/Neon)  
+- ORM: Prisma  
+
+Deployment includes:
+- environment-based configuration  
+- production-ready server setup  
+- Prisma migrations during build  
 
 
 ## ⚙️ Getting Started
