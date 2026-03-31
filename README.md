@@ -250,10 +250,10 @@ This project includes real-world backend concerns:
 ## 👨‍💻 Author
 **Ashraful Islam**
 Backend Engineer
-
+```
 🌍 Open to Remote Opportunities
 💼 Focused on scalable backend systems
-
+```
 ---
 
 ## ⭐ Final Thought
